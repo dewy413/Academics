@@ -1,5 +1,7 @@
 # !(https://www.lyon.edu/assets/2433/logo-og-1500.png)
 
+![The San Juan Mountains are beautiful!](/assets/images/san-juan-mountains.jpg "San Juan Mountains")
+
 ## What is this?
 
 This is just my Academics folder. These are going to be concepts I might have learned in class or in class programming assignment I have done.
