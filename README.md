@@ -1,6 +1,4 @@
-# !(https://www.lyon.edu/assets/2433/logo-og-1500.png)
-
-![Academics!](https://www.lyon.edu/assets/2433/logo-og-1500.png)
+# ![Academics!](https://www.lyon.edu/assets/2433/logo-og-1500.png)
 
 ## What is this?
 
