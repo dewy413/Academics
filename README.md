@@ -1,6 +1,6 @@
 # !(https://www.lyon.edu/assets/2433/logo-og-1500.png)
 
-![The San Juan Mountains are beautiful!](/assets/images/san-juan-mountains.jpg "San Juan Mountains")
+![Academics!](https://www.lyon.edu/assets/2433/logo-og-1500.png)
 
 ## What is this?
 
