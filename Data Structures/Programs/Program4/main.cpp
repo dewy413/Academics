@@ -72,7 +72,7 @@ int main() {
     char z;
     List C;
     ifstream in;
-    in.open("C:\\Users\\jdeui\\Documents\\Programming\\Misc\\testingcode\\char.txt");
+    in.open(R"(C:\Users\14794\Documents\Programming\Scrap\char.txt)");
     for (i = 0; i < 100; i++) {
         in >> z;
         C.insertItem(z);
