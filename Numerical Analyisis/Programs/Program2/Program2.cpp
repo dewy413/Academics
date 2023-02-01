@@ -3,6 +3,13 @@
  * Program 2
  * Pledged
  * 1/30/22
+ *
+ *
+ * [-1, 0] After 16 iterations, p = -0.4147
+ * [2, 3] After 16 iterations, p = 2.2198
+ *
+ *
+ *
  */
 
 #include <iostream>
