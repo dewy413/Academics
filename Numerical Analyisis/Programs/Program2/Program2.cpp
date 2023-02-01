@@ -23,7 +23,6 @@ using namespace std;
 
 double f(double x) {
     return -2.75 * pow(x, 3.0) + 18 * pow(x, 2.0) -21 * x - 12;
-    //cout << (x * pow(exp(1), -x/2)) - .5 << endl;
     //return (x * pow(exp(1), -x/2)) - .5;
     //return sqrt(x) - cos(x);
     //return (pow(x, 3) - 7 * pow(x,2) + (14 * x) - 6);
