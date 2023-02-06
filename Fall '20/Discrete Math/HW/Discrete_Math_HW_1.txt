@@ -1,0 +1,92 @@
+9.5/10
+
+1. a, b, c, d are all propositions
+
+
+a: True
+b: False
+c: True
+d: False
+
+e is not a proposition because we do not know the value of x.
+f is not a propostion because there is nothing that can be true or false about it. It is just a statement.
+
+
+
+2. c and e is a proposition because it is a statement that can be true or false.
+
+a and b are not propostions because they are just statements. They cannot be true or false.
+e and f are not propostions because we do not know they value of x or n; in which we cannot know if it is true or false.
+
+
+
+9a. Sharks have not been spotted near the shore.
+9b. Swimming at the New Jesey shore is allowed and Sharks have been spotted near the shore.
+9c. Swimming at the New Jesey shore is not allowed or Sharks have been spotted near the shore.
+9d. If Swimming at the New Jesey shore is allowed then Sharks have not been spotted near the shore.
+9e. If Sharks have not been spotted near the shore then Swimming at the New Jesey shore is allowed.
+9f. If Swimming at the New Jesey shore is not allowed then Sharks have not been spotted near the shore.
+
+
+11a. p ^ q
+11b. p ¬q 
+11c. ¬p ^ ¬q	
+11d. q ⊕ p
+
+
+16a. True
+16b. False
+16c. False (I wish)
+16d. True
+
+
+17a. True
+17b. False
+17c. False
+17d. False
+
+
+18a. False
+18b. False
+18c. True
+18d. True
+
+
+31a. 
+
+p	q	(p ∧ ¬q)
+F	F	F
+F	T	F
+T	F	T
+T	T	F
+
+
+31b.
+
+p	q	(p ∨ ¬q)
+F	F	T
+F	T	F
+T	F	T
+T	T	T
+
+
+31c.
+
+
+p	q	(p ∨ ¬q) → q
+F	F	F
+F	T	T
+T	F	F
+T	T	T
+
+
+31d.
+
+p	q	(p ∨ q) → (p ∧ q)
+F	F	T
+F	T	F
+T	F	F
+T	T	T
+
+
+	
