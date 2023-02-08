@@ -3,6 +3,13 @@
  * Program 3
  * Pledged
  * 2/6/22
+ *
+ *
+ * 6a. p5 = 1.8294
+ * 6c. p3 = 2.3707 and p4 = 3.7221
+ * 6e. p17 = 5.6663 and p12 = 5.6663
+ * 6f. NA and p5 = 3.0964 and p4 = 6.285
+ *
  */
 
 #include <iostream>
@@ -14,14 +21,19 @@ using namespace std;
 
 
 double f(double x) {
-    //return pow(x, 2) - 6;
-    return pow(x, 3) - (2 * pow(x, 2)) - 5;
+    //return exp(x) + pow(2, -x) + 2 * cos(x) - 6; //6a.
+    //return 2 * x * cos(2 * x) - pow((x - 2), 2); //6c.
+    //return exp(x) - pow(3 * x, 2); //6e.
+    return sin(x) - exp(-x); //6f.
+
 
 }
 
 double fprime(double x) {
-   //return (2 * x);
-   return (3 * pow(x, 2)) - (4 * x);
+    //return -2 * sin(x) + exp(x) - (log(2)/pow(2, x)); //6a.
+    //return -2 * (2 * x * sin(2 * x) - cos(2 * x) + x - 2); //6c.
+    //return exp(x) - (6 * x); //6e.
+    return cos(x) - exp(-x); //6f.
 }
 
 
@@ -44,7 +56,7 @@ void newton() {
         cout << "p" << i << " = " << p << endl;
 
         if(abs(p - p0) < TOL) {
-            cout << "p" << i << " = " << p << endl;
+           // cout << "p" << i << " = " << p << endl;
             cout << "Accurate to " << setprecision(0) << scientific << TOL;
             return;
         }
@@ -62,8 +74,5 @@ void newton() {
 
 
 int main() {
-
     newton();
-
-
 }
