@@ -1,0 +1,9 @@
+aabbccddeeffgg
+hijklllmmmnnnooop
+whatisanoddstring
+whatisanevenstring
+evenoroddvnr
+racecar
+palindrome
+
+
