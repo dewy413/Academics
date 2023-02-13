@@ -1,14 +1,23 @@
 /*
  * Jordan Deuley
- * Program 3
+ * Program 4
  * Pledged
- * 2/6/22
+ * 2/13/22
  *
+ * Newton @ p0 = 0
+ * 4 steps to achieve 0.56714
+ * Steffen @ p0 = 0
+ * 4 steps to achieve 0.56714
  *
- * 6a. p5 = 1.8294
- * 6c. p3 = 2.3707 and p4 = 3.7221
- * 6e. p17 = 5.6663 and p12 = 5.6663
- * 6f. NA and p5 = 3.0964 and p4 = 6.285
+ * Newton @ p0 = .5
+ * 3 steps to achieve 0.56714
+ * Steffen @ p0 = .5
+ * 3 steps to achieve 0.56714
+ *
+ * Newton @ p0 = 1
+ * 4 steps to achieve 0.56714
+ * Steffen @ p0 = 1
+ * 4 steps to achieve 0.56714
  *
  */
 
@@ -18,28 +27,13 @@
 
 using namespace std;
 
-
-
-double f(double x) {
-    //return exp(x) + pow(2, -x) + 2 * cos(x) - 6; //6a.
-    //return 2 * x * cos(2 * x) - pow((x - 2), 2); //6c.
-    //return exp(x) - pow(3 * x, 2); //6e.
-    //return sin(x) - exp(-x); //6f.
-    return exp(-x) - x;
-
-}
-
-double fprime(double x) {
-    //return -2 * sin(x) + exp(x) - (log(2)/pow(2, x)); //6a.
-    //return -2 * (2 * x * sin(2 * x) - cos(2 * x) + x - 2); //6c.
-    //return exp(x) - (6 * x); //6e.
-    //return cos(x) - exp(-x); //6f.
-    return -exp(-x)-1;
+double g(double x) {
+    return exp(-x);
 }
 
 
-void newton() {
-    double TOL, p0, p;
+void steffen() {
+    double TOL, p0, p1, p2, p;
     int max, i;
     cout << "Enter p0:" << endl;
     cin >> p0;
@@ -53,11 +47,12 @@ void newton() {
     i = 1;
 
     while(i <= max) {
-        p = p0 - ((f(p0))/(fprime(p0)));
+        p1 = g(p0);
+        p2 = g(p1);
+        p = p0 - (pow((p1 - p0), 2) / (p2 - (2 * p1) + p0));
         cout << "p" << i << " = " << p << endl;
 
         if(abs(p - p0) < TOL) {
-           // cout << "p" << i << " = " << p << endl;
             cout << "Accurate to " << setprecision(0) << scientific << TOL;
             return;
         }
@@ -68,12 +63,10 @@ void newton() {
     cout << "Accurate to " << setprecision(0) << scientific << TOL;
 
 
-
-
 }
 
 
 
 int main() {
-    newton();
+    steffen();
 }
