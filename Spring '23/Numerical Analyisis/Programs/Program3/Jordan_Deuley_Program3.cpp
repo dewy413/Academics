@@ -25,7 +25,7 @@ double f(double x) {
     //return 2 * x * cos(2 * x) - pow((x - 2), 2); //6c.
     //return exp(x) - pow(3 * x, 2); //6e.
     //return sin(x) - exp(-x); //6f.
-    return exp(-x) - x;
+    //return exp(-x) - x;
 
 }
 
@@ -34,7 +34,7 @@ double fprime(double x) {
     //return -2 * (2 * x * sin(2 * x) - cos(2 * x) + x - 2); //6c.
     //return exp(x) - (6 * x); //6e.
     //return cos(x) - exp(-x); //6f.
-    return -exp(-x)-1;
+    //return -exp(-x)-1;
 }
 
 
