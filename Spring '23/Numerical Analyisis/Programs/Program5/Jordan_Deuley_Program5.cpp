@@ -1,55 +1,57 @@
 #include <iostream>
 #include <cmath>
+#include <iomanip>
+
+/*
+ * Jordan Deuley
+ * Program 5
+ * Pledged
+ * 3/3/22
+ * Composite Trapezoidal
+*/
+
 
 using namespace std;
 
 double f(double x) {
     return 1 / (x + 4);
 }
-`   Q
 
 double trapezoidal(double a, double b, int n) {
 
-    double h = (b - a) / 2;
-    double sum = 0.5 * (f(a) + f(b));
-
+    double h = (b - a) / n;
+    double sum = f(a) + f(b);
     for(int i = 1; i < n; i++) {
-
-        double x = a + i * h;
-        sum += f(x);
+        double xi = a + (i * h);
+        sum += 2 * f(xi);
     }
-
-    return h * sum;
-
+    return (h / 2) * sum;
 
 }
 
-
-double richardson_extrapolation(double a, double b, double tol) {
-    int n = 1;
-    double I1 = trapezoidal(a, b, n);
-    double I2 = trapezoidal(a, b, 2*n);
-    double err = abs(I2 - I1) / 3.0;
-    while (err > tol) {
-        n *= 2;
-        I1 = I2;
-        I2 = trapezoidal(a, b, 2*n);
-        err = abs(I2 - I1) / 3.0;
-    }
-    return I2;
-}
 
 int main() {
-    double a, b, TOL;
+    cout << setprecision(6);
+    double a, b;
+    int n = 1;
+    double result = 0.0;
+    double prev_result = 0.0;
+    double tol = pow(10, -(5));
     cout << "Enter the Upper bound:";
     cin >> b;
     cout << "Enter the Lower bound:";
     cin >> a;
-    TOL = pow(10, -(5));
 
-    double result = richardson_extrapolation(a, b, TOL);
+    do {
+        prev_result = result;
+        result = trapezoidal(a, b, n);
+        n *= 2;
 
-    cout << "The result is: " << result << endl;
+    } while (abs(result - prev_result) > tol);
+
+    cout << "Result: " << result << endl;
+
+
 
 
 }
