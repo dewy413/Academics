@@ -35,8 +35,6 @@ void RungeKutta(int a, int b, double alpha, double h) {
 
     }
 
-
-    cout << "t = " << t << " w = " << w << endl;
 }
 
 
